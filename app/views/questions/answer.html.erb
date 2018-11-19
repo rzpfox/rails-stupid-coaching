@@ -1,7 +1,16 @@
-<!-- <h1>Questions#answer</h1>
-<p>Find me in app/views/questions/answer.html.erb</p>
- -->
+  <!-- <h1>Questions#answer</h1>
+  <p>Find me in app/views/questions/answer.html.erb</p>
+   -->
 
+<div class="response">
+  <p><%=@response%></p>
+  <p>-You</p>
+  <p></p>
+</div>
 
- <h1>Question: <%=@response%></h1>
- <h2>Answer: <%=@coach_answer%></h2>
+<div class ="coachanswer">
+  <p ><%=@coach_answer%></p>
+   <p >-Your Coach</p>
+</div>
+
+<p><%= link_to "Ask a new question", "/ask" %></p>

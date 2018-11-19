@@ -6,8 +6,12 @@ class QuestionsController < ApplicationController
 
   def answer
     @response = params[:question]
+
     if @response == "I am going to work right now!"
       @coach_answer = "Great!"
+    elsif @response == "What time is it?"
+      @coach_answer = Time.now.strftime("%H:%M")
+
     elsif @response.include? "?"
       @coach_answer = "Silly question, get dressed and go to work!"
     else
